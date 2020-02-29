@@ -1,2 +1,2 @@
 # SWExpertAcademy
-SWExpertAcademy 문제풀이
+SWExpertAcademy 문제 풀이
