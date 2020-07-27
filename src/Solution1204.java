@@ -27,5 +27,6 @@ public class Solution1204 {
 			}
 			System.out.println("#" + num + " " + index);
 		}
+		sc.close();
 	}
 }

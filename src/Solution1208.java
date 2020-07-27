@@ -22,5 +22,6 @@ public class Solution1208 {
 			}
 			System.out.println("#" + i + " " + (box[99] - box[0]));
 		}
+		sc.close();
 	}
 }

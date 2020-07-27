@@ -48,5 +48,6 @@ public class Solution1215 {
 			}
 			System.out.println("#" + i + " " + ans);
 		}
+		sc.close();
 	}
 }
