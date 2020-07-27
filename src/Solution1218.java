@@ -24,10 +24,10 @@ public class Solution1218 {
 	
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		int len = 0;
+//		int len = 0;
 		String str;
 		for(int i=1;i<=TC;i++) {
-			len = sc.nextInt();
+			sc.nextInt();
 			sc.nextLine();
 			str = sc.nextLine();
 			int strLen = str.length();
@@ -78,5 +78,6 @@ public class Solution1218 {
 				System.out.println("#" + i + ' ' + "0");
 			}
 		}
+		sc.close();
 	}
 }

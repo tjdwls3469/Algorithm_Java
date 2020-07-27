@@ -30,5 +30,6 @@ public class Solution1206 {
 			}
 			System.out.println("#" + i + " " + ans);
 		}
+		sc.close();
 	}
 }

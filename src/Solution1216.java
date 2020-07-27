@@ -7,7 +7,7 @@ public class Solution1216 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		for(int i=1;i<=TC;i++) {
-			int ans = 0;
+//			int ans = 0;
 			sc.nextInt();
 			sc.nextLine();
 			String[] plate = new String[SIZE];
@@ -17,7 +17,7 @@ public class Solution1216 {
 			int max = 0;
 			for(int j=0;j<SIZE;j++) {
 				int len = 100;
-				int temp = 0;
+//				int temp = 0;
 				boolean check = false;
 				while(true) {
 					if(len == 0) {
@@ -34,7 +34,7 @@ public class Solution1216 {
 							n++;
 						}
 						if(ok == true) {
-							temp = len;
+//							temp = len;
 							check = true;
 							break;
 						}
@@ -50,7 +50,7 @@ public class Solution1216 {
 			}
 			for(int j=0;j<SIZE;j++) {
 				int len = 100;
-				int temp = 0;
+//				int temp = 0;
 				boolean check = false;
 				while(true) {
 					if(len == 0) {
@@ -67,7 +67,7 @@ public class Solution1216 {
 							n++;
 						}
 						if(ok == true) {
-							temp = len;
+//							temp = len;
 							check = true;
 							break;
 						}
@@ -83,5 +83,6 @@ public class Solution1216 {
 			}
 			System.out.println("#" + i + " " + max);
 		}
+		sc.close();
 	}
 }

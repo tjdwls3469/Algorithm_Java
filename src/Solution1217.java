@@ -21,5 +21,6 @@ public class Solution1217 {
 			ans = solve(num, cnt, 1, 1);
 			System.out.println("#" + i + ' ' + ans);
 		}
+		sc.close();
 	}
 }

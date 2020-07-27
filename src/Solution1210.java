@@ -63,5 +63,6 @@ public class Solution1210 {
 				}
 			}
 		}
+		sc.close();
 	}
 }

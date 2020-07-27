@@ -71,5 +71,6 @@ public class Solution1211 {
 			}
 			System.out.println("#" + i + " " + ans);
 		}
+		sc.close();
 	}
 }

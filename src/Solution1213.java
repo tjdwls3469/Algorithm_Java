@@ -9,7 +9,7 @@ public class Solution1213 {
 			String sentence;
 			String word;
 			int ans = 0;
-			int temp = Integer.parseInt(sc.nextLine());
+			Integer.parseInt(sc.nextLine());
 			word = sc.nextLine();
 			sentence = sc.nextLine();
 			int len = word.length();
@@ -48,5 +48,6 @@ public class Solution1213 {
 			}
 			System.out.println("#" + i + " " + ans);
 		}
+		sc.close();
 	}
 }
