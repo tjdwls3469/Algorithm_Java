@@ -3,8 +3,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class Baekjoon11729 {
-	public static StringBuilder ans = new StringBuilder();
 	public static int cnt = 0;
+	public static StringBuilder ans = new StringBuilder();
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
