@@ -1,2 +1,2 @@
-# SWExpertAcademy
-SWExpertAcademy 문제풀이
+# Algorithm_Java
+BaekJoon, SWExpertAcademy, Jungol 문제풀이
