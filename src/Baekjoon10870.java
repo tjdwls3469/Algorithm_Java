@@ -17,6 +17,6 @@ public class Baekjoon10870 {
 		if(memo[num] != 0) {
 			return memo[num];
 		}
-		return memo[num] = fibo(num-1) + fibo(num-2);
+		return memo[num] = fibo(num- 1) + fibo(num-2);
 	}
 }
