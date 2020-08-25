@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Baekjoon2447 {
 	public static char[][] map;
 	
+	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
