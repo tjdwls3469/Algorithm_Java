@@ -27,6 +27,7 @@ public class Baekjoon1629 {
 		if(X % 2 != 0) {
 			result *= A % mod;
 		}
+		
 		return result % mod;
 	}
 }
