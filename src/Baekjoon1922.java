@@ -18,14 +18,14 @@ public class Baekjoon1922 {
 		int b;
 		int c;
 		StringTokenizer st;
-		Edge6497[] list = new Edge6497[M];
+		Edge[] list = new Edge[M];
 		for (int i = 0; i < M; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
 			a = Integer.parseInt(st.nextToken());
 			b = Integer.parseInt(st.nextToken());
 			c = Integer.parseInt(st.nextToken());
 			
-			list[i] = new Edge6497(a, b, c);
+			list[i] = new Edge(a, b, c);
 		}
 		
 		Arrays.sort(list);
@@ -67,7 +67,7 @@ public class Baekjoon1922 {
 	}
 }
 
-class Edge implements Comparable<Edge6497> {
+class Edge implements Comparable<Edge> {
 	public int from;
 	public int to;
 	public int weight;
@@ -84,7 +84,7 @@ class Edge implements Comparable<Edge6497> {
 	}
 	
 	@Override
-	public int compareTo(Edge6497 o) {
+	public int compareTo(Edge o) {
 		return this.weight - o.weight;
 	}
 }
