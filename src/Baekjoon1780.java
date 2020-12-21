@@ -9,6 +9,7 @@ public class Baekjoon1780 {
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder();
 		StringTokenizer st;
 		int N = Integer.parseInt(br.readLine());
 		map = new int[N][N];
@@ -21,7 +22,6 @@ public class Baekjoon1780 {
 		}
 		solve(0, 0, N);
 		
-		StringBuilder sb = new StringBuilder();
 		for (int i = 0; i < 3; i++) {
 			sb.append(ans[i]).append('\n');
 		}
