@@ -8,9 +8,9 @@ import java.util.StringTokenizer;
 public class Baekjoon1931 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer st;
 		int N = Integer.parseInt(br.readLine());
 		
-		StringTokenizer st;
 		int[][] ary = new int[N][2];
 		for (int i = 0; i < N; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
