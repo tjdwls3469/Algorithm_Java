@@ -3,7 +3,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.PriorityQueue;
-import java.util.StringTokenizer;
 
 public class Baekjoon16236 {
 	public static int sharkSize = 2;
@@ -15,34 +14,35 @@ public class Baekjoon16236 {
 	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringTokenizer st;
 		N = Integer.parseInt(br.readLine());
 		map = new int[N][N];
 		check = new boolean[N][N];
 		int sx = 0;
 		int sy = 0;
 		
+		String line = "";
 		for (int i = 0; i < N; i++) {
-			st = new StringTokenizer(br.readLine(), " ");
-			for (int j = 0; j < N; j++) {
-				map[i][j] = Integer.parseInt(st.nextToken());
-				if(map[i][j] == 9) {
+			line = br.readLine();
+			for (int j = 0, index = 0; j < N; j++, index += 2) {
+				map[i][j] = line.charAt(index) - '0';
+
+				if (map[i][j] == 9) {
 					sx = i;
 					sy = j;
 					map[i][j] = 0;
 				}
 			}
-		} // OK
+		}
 		
 		bfs(sx, sy);
 		System.out.println(ans);
-	} // end of main
-
+	}
+	
 	public static int[] dx = { -1, 0, 0, 1 };
 	public static int[] dy = { 0, -1, 1, 0 };
 	public static int nx, ny;
 	
-	private static void bfs(int x, int y) {
+	public static void bfs(int x, int y) {
 		PriorityQueue<Shark> q = new PriorityQueue<Shark>();
 		check[x][y] = true;
 		q.offer(new Shark(x, y, 0));
@@ -81,31 +81,31 @@ public class Baekjoon16236 {
 			}
 		} // end of while
 	} // end of bfs
-} // end of class
-
-class Shark implements Comparable<Shark> {
-	public int x;
-	public int y;
-	public int time;
 	
-	public Shark(int x, int y, int time) {
-		super();
-		this.x = x;
-		this.y = y;
-		this.time = time;
-	}
-	
-	@Override
-	public int compareTo(Shark o) {
-		// 거리가 가까운 물고기가 많다면, 가장 위에 있는 물고기, 그러한 물고기가 여러마리라면, 가장 왼쪽에 있는 물고기를 먹는다.
-		if(this.time == o.time && this.x == o.x) {
-			return this.y - o.y;
+	public static class Shark implements Comparable<Shark> {
+		public int x;
+		public int y;
+		public int time;
+		
+		public Shark(int x, int y, int time) {
+			super();
+			this.x = x;
+			this.y = y;
+			this.time = time;
 		}
-		// 거리가 가까운 물고기가 많다면, 가장 위에 있는 물고기를 먹는다.
-		if(this.time == o.time) {
-			return this.x - o.x;
+		
+		@Override
+		public int compareTo(Shark o) {
+			// 거리가 가까운 물고기가 많다면, 가장 위에 있는 물고기, 그러한 물고기가 여러마리라면, 가장 왼쪽에 있는 물고기를 먹는다.
+			if(this.time == o.time && this.x == o.x) {
+				return this.y - o.y;
+			}
+			// 거리가 가까운 물고기가 많다면, 가장 위에 있는 물고기를 먹는다.
+			if(this.time == o.time) {
+				return this.x - o.x;
+			}
+			// 거리가 가까운 물고기를 먹는다.
+			return this.time - o.time;
 		}
-		// 거리가 가까운 물고기를 먹는다.
-		return this.time - o.time;
 	}
 }
