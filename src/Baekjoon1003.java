@@ -25,15 +25,14 @@ public class Baekjoon1003 {
 		System.out.print(sb);
 	}
 	
-}
-
-class Pair{
-	public int zeroCnt;
-	public int oneCnt;
-	
-	public Pair(int zeroCnt, int oneCnt) {
-		super();
-		this.zeroCnt = zeroCnt;
-		this.oneCnt = oneCnt;
+	static class Pair{
+		public int zeroCnt;
+		public int oneCnt;
+		
+		public Pair(int zeroCnt, int oneCnt) {
+			super();
+			this.zeroCnt = zeroCnt;
+			this.oneCnt = oneCnt;
+		}
 	}
 }
