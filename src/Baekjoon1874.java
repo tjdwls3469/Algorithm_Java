@@ -9,30 +9,28 @@ public class Baekjoon1874 {
 		int n = Integer.parseInt(br.readLine());
 		int[] stack = new int[n];
 		int top = -1;
-		int pushNum = 0;
-		int num;
+		int pushNum = 1;
 		
-		for (int i = 1; i <= n; i++) {
+		int num = 0;
+		for (int i = 0; i < n; i++) {
 			num = Integer.parseInt(br.readLine());
-			if(pushNum < num) {
-				for (int j = pushNum; j < num; j++) {
-					sb.append('+').append('\n');
-					stack[++top] = ++pushNum;
-				}
-				sb.append('-').append('\n');
-				top--;
-			}else if(pushNum >= num) {
-				while(top != -1) {
-					sb.append('-').append('\n');
-					if(stack[top--] == num) {
-						break;
-					}else {
-						System.out.println("NO");
-						System.exit(0);
-					}
-				}
+			
+			if(top != -1 && stack[top] > num) {
+				break;
 			}
+			
+			for (int j = pushNum; j <= num; j++, pushNum++) {
+				sb.append('+').append('\n');
+				stack[++top] = j;
+			}
+			sb.append('-').append('\n');
+			top--;
 		}
-		System.out.print(sb);
+		
+		if(top == -1) {
+			System.out.println(sb);
+		}else {
+			System.out.println("NO");
+		}
 	}
 }
