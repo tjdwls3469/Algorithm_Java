@@ -4,6 +4,7 @@ import java.io.InputStreamReader;
 
 public class Baekjoon10870_ver2 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
+		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		int[] memo = new int[n + 1];
