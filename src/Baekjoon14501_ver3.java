@@ -6,14 +6,12 @@ import java.util.StringTokenizer;
 public class Baekjoon14501_ver3 {
 	private static int N;
 	private static int[] T, P;
-	private static boolean[] isSelected;
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());
 		T = new int[N + 1];
 		P = new int[N + 1];
-		isSelected = new boolean[N + 1];
 		for (int i = 1; i <= N; i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 			T[i] = Integer.parseInt(st.nextToken());
