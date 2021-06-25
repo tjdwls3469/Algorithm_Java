@@ -1,0 +1,27 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class Baekjoon1003_ver2 {
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int T = Integer.parseInt(br.readLine());
+
+		int[] memo0 = new int[41];
+		int[] memo1 = new int[41];
+		memo1[2] = memo1[1] = memo0[2] = memo0[0] = 1;
+		for (int i = 3; i < 41; i++) {
+			memo0[i] = memo0[i - 1] + memo0[i - 2];
+			memo1[i] = memo1[i - 1] + memo1[i - 2];
+		}
+		
+		StringBuilder sb = new StringBuilder();
+		int N;
+		for (int i = 0; i < T; i++) {
+			N = Integer.parseInt(br.readLine());
+			sb.append(memo0[N]).append(' ').append(memo1[N]).append('\n');
+		}
+		
+		System.out.print(sb);
+	}
+}
