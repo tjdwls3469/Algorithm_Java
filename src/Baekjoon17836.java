@@ -8,7 +8,7 @@ public class Baekjoon17836 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		int N = Integer.parseInt(st.nextToken());
-		int M = Integer.parseInt(st.nextToken());
+//		int M = Integer.parseInt(st.nextToken());
 //		int T = Integer.parseInt(st.nextToken());
 		
 //		int[][] map = new int[N][M];
