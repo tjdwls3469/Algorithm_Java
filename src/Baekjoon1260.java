@@ -9,10 +9,12 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Baekjoon1260 {
+	@SuppressWarnings("rawtypes")
 	private static ArrayList[] adjList;
 	private static boolean[] check;
 	private static StringBuilder sb = new StringBuilder();
 
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
